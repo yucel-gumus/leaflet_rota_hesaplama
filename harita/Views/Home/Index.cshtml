@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>En Kısa Yolu Bulma</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+</head>
+<body>
+
+    <div>
+        <label for="start">Başlangıç Noktası:</label>
+        <input type="text" id="start" />
+    </div>
+    <div>
+        <label for="end">Hedef Noktası:</label>
+        <input type="text" id="end" />
+    </div>
+    <div>
+        <button onclick="getCoordinates()">Rota Hesapla</button>
+    </div>
+
+    <div id="map" style="height: 500px;"></div>
+
+    <script>
+        var map = L.map('map').setView([41.090484, 28.9508949], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        function getCoordinates() {
+            var locationInput = document.getElementById("start");
+            var locationInput2 = document.getElementById("end");
+
+            var address = locationInput.value;
+            var address2 = locationInput2.value;
+
+            if (address && address2) {
+                var url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(address)}&format=json`;
+                var url2 = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(address2)}&format=json`;
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.length > 0) {
+                            var lat = data[0].lat;
+                            var lon = data[0].lon;
+                            fetchCoordinates(lat, lon, url2);
+                        } else {
+                            alert("Başlangıç konumu bulunamadı.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Hata:", error);
+                        alert("Bir hata oluştu.");
+                    });
+            } else {
+                alert("Başlangıç ve hedef noktalarını girin.");
+            }
+        }
+
+        function fetchCoordinates(startLat, startLon, url) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        var endLat = data[0].lat;
+                        var endLon = data[0].lon;
+                        displayRoute(startLat, startLon, endLat, endLon);
+                    } else {
+                        alert("Hedef konum bulunamadı.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Hata:", error);
+                    alert("Bir hata oluştu.");
+                });
+        }
+
+        function displayRoute(startLat, startLon, endLat, endLon) {
+            var control = L.Routing.control({
+                waypoints: [
+                    L.latLng(startLat, startLon),
+                    L.latLng(endLat, endLon)
+                ],
+                routeWhileDragging: true
+            }).addTo(map);
+        }
+    </script>
+
+</body>
+</html>

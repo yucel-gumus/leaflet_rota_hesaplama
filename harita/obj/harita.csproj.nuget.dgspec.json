@@ -1,36 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yucel.gumus\\Desktop\\react\\harita\\harita\\harita.csproj": {}
+    "/Users/yucelgmus/leaflet_rota_hesaplama/harita/harita.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yucel.gumus\\Desktop\\react\\harita\\harita\\harita.csproj": {
+    "/Users/yucelgmus/leaflet_rota_hesaplama/harita/harita.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yucel.gumus\\Desktop\\react\\harita\\harita\\harita.csproj",
+        "projectUniqueName": "/Users/yucelgmus/leaflet_rota_hesaplama/harita/harita.csproj",
         "projectName": "harita",
-        "projectPath": "C:\\Users\\yucel.gumus\\Desktop\\react\\harita\\harita\\harita.csproj",
-        "packagesPath": "C:\\Users\\yucel.gumus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yucel.gumus\\Desktop\\react\\harita\\harita\\obj\\",
+        "projectPath": "/Users/yucelgmus/leaflet_rota_hesaplama/harita/harita.csproj",
+        "packagesPath": "/Users/yucelgmus/.nuget/packages/",
+        "outputPath": "/Users/yucelgmus/leaflet_rota_hesaplama/harita/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\yucel.gumus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/yucelgmus/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
-            "targetAlias": "netcoreapp3.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -41,8 +35,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
-          "targetAlias": "netcoreapp3.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
@@ -54,16 +48,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.0.1, 3.0.1]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.0.3, 3.0.3]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -72,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.404/RuntimeIdentifierGraph.json"
         }
       }
     }

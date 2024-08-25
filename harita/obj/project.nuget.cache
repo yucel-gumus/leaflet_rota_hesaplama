@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6RDGLKFzd4INC5wf/UJxFqSvD3KXc4MtgkV+zUK0Ty/Li2r2autSEKLgAaisczKSeKLSXAPre7YMtUcN59pdcA==",
+  "dgSpecHash": "CcAoSOvcY4qGGvLkoDqBO5V/mjYe9ZjLaUUPW3RQlLyPtinmHOXZqd+fpnSix7xArFK6iqXAM2Txssdt0vl6IQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yucel.gumus\\Desktop\\react\\harita\\harita\\harita.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\yucel.gumus\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
-    "C:\\Users\\yucel.gumus\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512"
-  ],
+  "projectFilePath": "/Users/yucelgmus/leaflet_rota_hesaplama/harita/harita.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
